@@ -1,80 +1,77 @@
-# Bank Campaign Machine Learning Prediction
+### Bank Campaign Machine Learning Prediction
 
-by: Aryo Atha Rizaldi
+**By: Aryo Atha Rizaldi**
 
-## Bussiness Understanding
-### **Context**
+---
 
-Data ini mencakup hasil dari kampanye pemasaran bank yang melibatkan panggilan telepon langsung ke rumah atau ponsel untuk mengajak orang menaruh deposit berjangka. Jika klien setuju untuk menaruh deposit, variabel target akan diset sebagai **'yes'**, dan jika tidak, akan diset sebagai **'no'**.
+#### Business Understanding
 
-Target: 
-* 0 : Tidak menaruh deposit 
-* 1 : Menaruh deposit
+**Context**
 
+This data encompasses the results of a bank's marketing campaign involving direct phone calls to homes or mobile phones to encourage people to place term deposits. If the client agrees to place a deposit, the target variable is set to 'yes'; otherwise, it is set to 'no'.
 
+**Target:**
 
-### **Problem Statement**
+- 0: No deposit placed
+- 1: Deposit placed
 
-Stakeholder: Tim Pemasaran, Penjualan dan Layanan Pelanggan, dan Manajemen
+**Problem Statement**
 
-Proses kampanye penawaran deposit berjangka memerlukan alokasi waktu dan sumber daya finansial yang signifikan. Tanpa adanya penyaringan terlebih dahulu, jika bank memutuskan untuk menjangkau semua nasabah tanpa mempertimbangkan potensi mereka untuk menaruh deposit, hal ini dapat **mengakibatkan pemborosan sumber daya yang berharga** seperti uang yang dikeluarkan oleh bank dan waktu untuk menghubungi nasabah-nasabah tersebut. Oleh karena itu, dengan adanya **Machine Learning**, dapat meningkatkan efisiensi proses kampanye yang dilakukan oleh bank.  
+**Stakeholders:** Marketing Team, Sales and Customer Service, and Management
 
-**Machine Learning** akan membantu bank dalam **mengevaluasi dan memodelkan pola-pola kompleks dari data historis**, memungkinkan identifikasi faktor-faktor yang paling berpengaruh terhadap keputusan calon nasabah. Dengan pendekatan ini, bank dapat **meningkatkan efisiensi kampanye** pemasaran mereka, **mengoptimalkan penggunaan sumber daya**, dan secara **lebih tepat menargetkan kandidat** yang memiliki peluang tinggi untuk berinvestasi dalam deposit berjangka. Disini, **Machine Learning** dapat membantu bank untuk **menyaring calon nasabah** berdasarkan data dengan cermat, menargetkan mereka yang memiliki **potensi tertinggi** untuk menaruh deposit. Dengan pendekatan ini, bank berharap dapat mengoptimalkan penggunaan waktu dan biaya, sambil tetap fokus pada segmen nasabah yang lebih mungkin merespons secara positif terhadap penawaran deposit berjangka.
+The process of offering term deposits through campaigns requires significant allocation of time and financial resources. Without prior screening, if the bank decides to reach out to all customers without considering their potential to place a deposit, it can result in a waste of valuable resources such as the bank's money and time spent contacting these customers. Therefore, by using Machine Learning, the efficiency of the bank's campaign process can be improved.
 
+Machine Learning will help the bank evaluate and model complex patterns from historical data, allowing the identification of the most influential factors affecting potential customers' decisions. With this approach, the bank can improve the efficiency of its marketing campaigns, optimize resource usage, and more accurately target candidates who have a high likelihood of investing in term deposits. Here, Machine Learning can help the bank carefully screen potential customers based on data, targeting those with the highest potential to place a deposit. This approach aims to optimize the use of time and money while focusing on customer segments most likely to respond positively to term deposit offers.
 
-### **Goals**
+**Goals**
 
-Dalam menghadapi tantangan tersebut, bank memiliki keinginan untuk mengembangkan kemampuan prediktif guna memprediksi apakah seorang calon nasabah bersedia menaruh deposit atau tidak. Tujuannya adalah untuk dapat dengan baik **menargetkan kampanye pemasaran pada kandidat yang memiliki potensial tertinggi** untuk melakukan investasi dalam bentuk deposit berjangka. Dengan adanya bantuan dari **Machine Learning** ini, bank berharap dapat **meningkatkan efisiensi dan efektivitas** strategi pemasaran mereka, dapat mengurangi kerugian bank, dan mengarahkan upaya pada segmen nasabah yang paling mungkin memberikan respons positif terhadap tawaran deposit berjangka. Selain itu, bank juga tidak harus menghubungi setiap calon nasabah untuk mengurangi kerugian materiil dan waktu dengan bantuan dari **Machine Learning**.
+Facing these challenges, the bank aims to develop predictive capabilities to forecast whether a prospective customer will agree to place a deposit or not. The goal is to effectively target marketing campaigns at candidates with the highest potential to invest in term deposits. With the assistance of Machine Learning, the bank hopes to improve the efficiency and effectiveness of its marketing strategies, reduce losses, and direct efforts towards the customer segments most likely to respond positively to term deposit offers. Additionally, the bank aims to minimize material and time losses by avoiding the need to contact every potential customer.
 
+#### Analytic Approach
 
-### **Analytic Approach**
+The plan involves conducting an in-depth analysis of the data to identify patterns that can distinguish between prospective customers who are willing to place a deposit and those who are not. Subsequently, a classification model will be built as a predictive tool for the bank, aiding in estimating the probability that a prospective customer will or will not place a deposit.
 
-Rencananya adalah melakukan analisis mendalam terhadap data untuk **mengidentifikasi pola-pola** yang dapat **membedakan antara kandidat nasabah yang bersedia menaruh deposit dan yang tidak**. Selanjutnya **membangun sebuah model klasifikasi yang dapat menjadi alat prediktif** bagi bank, membantu dalam memperkirakan probabilitas bahwa seorang kandidat nasabah akan atau tidak akan menaruh deposit.
+The analytic approach will involve thorough data exploration to uncover relationships and trends among related variables. Next, feature selection and data adjustment will be performed to prepare it as input for the classification model. This process is designed to improve prediction accuracy and identify key factors influencing customer decisions.
 
-Pendekatan analitik yang akan diambil melibatkan **eksplorasi data** secara menyeluruh untuk mengungkap hubungan dan tren yang mungkin ada di antara variabel-variabel terkait. Selanjutnya, akan dilakukan **pemilihan fitur** dan **penyesuaian data** untuk mempersiapkannya sebagai **input bagi model klasifikasi**. Proses ini didesain untuk **meningkatkan akurasi prediksi** dan **mengidentifikasi faktor-faktor kunci** yang memengaruhi keputusan nasabah.
+In building the classification model, appropriate Machine Learning techniques such as Logistic Regression or Decision Tree will be used, which can process complex patterns in the data. The model will be tested and evaluated using holdout data that has not been seen before to ensure reliability and good performance in predicting potential customer behavior.
 
-Dalam membangun model klasifikasi, akan digunakan teknik-teknik **Machine Learning** yang sesuai, seperti **Logistic Regression** atau **Decision Tree**, yang dapat memproses pola-pola kompleks dalam data. Model ini akan **diuji dan dievaluasi menggunakan data holdout yang tidak terlihat sebelumnya** untuk memastikan keandalan dan kinerja yang baik dalam memprediksi perilaku calon nasabah.
+With this analytic approach, the bank hopes to gain a deep understanding of critical factors influencing customer decisions and apply appropriate solutions to enhance the effectiveness of its marketing campaigns.
 
-Dengan pendekatan analitik ini, bank berharap dapat memperoleh pemahaman mendalam tentang faktor-faktor kritis yang mempengaruhi keputusan nasabah dan menerapkan solusi yang tepat untuk meningkatkan efektivitas kampanye pemasaran mereka.
+#### Metric Evaluation
 
+**Type 1 error:** False Positive (Customer predicted to place a deposit but actually does not)
+**Consequence:** Wasting campaign time and costs on customers who are unlikely to place a deposit
 
-### **Metric Evaluation**
+**Type 2 error:** False Negative (Customer predicted not to place a deposit but actually would)
+**Consequence:** Missing out on potential customers
 
-Type 1 error : **False Positive** (Nasabah diprediksi bisa deposit, tetapi aktualnya tidak deposit)   
-Konsekuensi: Membuang waktu dan biaya kampanye untuk nasabah yang tidak berpotensial menaruh deposit
+Below is the estimated cost the bank will incur for each false positive and false negative:
 
-Type 2 error : **False Negative** (Nasabah diprediksi tidak bisa deposit, tetapi aktualnya berpotensi untuk deposit)  
-Konsekuensi: Kehilangan kandidat nasabah potensial
+**False Positive:** The cost incurred by the bank for each false positive is the campaign cost for that customer. These campaign costs can include labor costs, media costs, and other expenses.
 
-Berikut adalah estimasi biaya yang akan dikeluarkan oleh bank untuk setiap false positive dan false negative:
+Based on research conducted by McKinsey & Company, the marketing campaign cost for banking products in Indonesia is estimated at Rp500,000 per customer.
 
-* **False Positive**
-Biaya yang akan dikeluarkan oleh bank untuk setiap false positive adalah biaya kampanye yang dikeluarkan untuk nasabah tersebut. Biaya kampanye ini dapat berupa biaya tenaga kerja, biaya media, dan biaya lainnya.
+Therefore, the cost incurred by the bank for each false positive is Rp500,000.
 
-Berdasarkan penelitian yang dilakukan oleh McKinsey & Company, biaya kampanye pemasaran untuk produk perbankan di Indonesia diperkirakan mencapai Rp500 ribu per nasabah.
+**False Negative:** The cost incurred by the bank for each false negative is the potential revenue lost from that customer. This potential revenue can include the deposit amount from the customer.
 
-Dengan demikian, biaya yang akan dikeluarkan oleh bank untuk setiap false positive adalah Rp500.000.
+According to OJK Indonesia, the minimum bank deposit is Rp8,000,000. Therefore, the potential revenue lost from each false negative is Rp8,000,000 per customer.
 
-* **False Negative**
-Biaya yang akan dikeluarkan oleh bank untuk setiap false negative adalah potensi pendapatan yang hilang dari nasabah tersebut. Potensi pendapatan ini dapat berupa besaran deposit dari nasabah.
+**Comparison with Losing Potential Customers**
 
-Menurut OJK Indonesia, minimal deposito bank adalah Rp. 8.000.000. Dengan demikian, potensi pendapatan yang hilang dari setiap false negative adalah Rp.8.000.000 per nasabah.
+Losing potential customers can negatively impact the bank's long-term revenue. This is because the bank will lose the opportunity to offer its products and services to these customers.
 
-* **Perbandingan dengan Kehilangan Kandidat Nasabah Potensial**
+According to research conducted by Frederick F. Reichheld & W. Earl Sasser, Jr., a bank that loses one customer could potentially lose revenue of up to Rp50 million per year.
 
-Kehilangan kandidat nasabah potensial dapat berdampak negatif terhadap pendapatan bank dalam jangka panjang. Hal ini karena bank akan kehilangan kesempatan untuk menawarkan produk dan layanannya kepada nasabah tersebut.
+If we calculate the False Positive without machine learning and without the possibility of losing customers (because all customers are contacted):
+Assuming the cost incurred as stated above, which is Rp500,000/customer.
+Total customers (total test and holdout data without any prior screening): 2813 customers.
+If there is no screening, the bank will contact all customers without any consideration/guidance, the bank will incur costs as follows:
+2813 customers x Rp500,000/customer = ± Rp1,406,500,000 (± 1.4 billion) without any certainty that the customers will place deposits.
 
-Berdasarkan penelitian yang dilakukan oleh Frederick F. Reichheld & W. Earl Sasser, Jr., bank yang kehilangan satu nasabah berpotensi kehilangan pendapatan hingga Rp50 juta per tahun.
+This is less feasible because, roughly speaking, the bank has to spend ± Rp1.4 billion just for the campaign, and the cost incurred by the bank is not proportional to the potential revenue from these customers, and it will also take a lot of time to contact these customers. Therefore, considering the consequences, the main focus in developing this model is to reduce False Negatives and increase False Positives, as the bank will experience greater losses by losing potential customers compared to the campaign and time costs. The primary goal is to improve Recall, maximizing the identification of potential customers who are actually willing to place deposits, even if there is an acceptable increase in false positives. This approach is expected to achieve an optimal balance between campaign cost efficiency and maintaining the desired potential customers.
 
->**Apabila kita buat perhitungan False Positive, tanpa machine learning dan tanpa adanya kemungkinan kehilangan nasabah (karena semua nasabah dihubungi):**  
->Asumsi biaya yang dikeluarkan sesuai dengan statement diatas, yaitu Rp. 500.000/nasabah.  
->Banyak nasabah (total data test dan holdout tanpa adanya penyaringan terlebih dahulu): 2813 nasabah.   
->Apabila tanpa penyaringan, bank akan menghubungi semua nasabah tanpa adanya pertimbangan/guidance, bank akan mengeluarkan biaya sebanyak:  
->2813 nasabah x Rp. 500.000/nasabah = ± Rp. 1,406,500,000 (**± 1.4 miliar**) tanpa adanya kemungkinan pasti bahwa nasabah tersebut akan melakukan deposit. 
-
-Hal ini kurang make sense apabila dilakukan, karena pengeluaran kasarnya, bank harus mengeluarkan biaya sebanyak ± **1.4 M** hanya untuk melakukan campaign, dan biaya yang dikeluarkan bank ini tidak sebanding dengan potensi pendapatan yang akan diperoleh dari nasabah tersebut, dan juga akan menyita waktu yang banyak untuk menghubungi nasabah tersebut. Maka dari itu, dengan mempertimbangkan konsekuensinya, fokus utama adalah mengembangkan model ini adalah **mengurangi False Negative** dan **meningkatkan False Positive**, karena bank akan mengalami **kerugian yang lebih besar apabila kehilangan kandidat nasabah potensial** apabila dibandingkan dengan kerugian biaya kampanye dan waktu. Tujuan utama adalah meningkatkan **Recall**, memaksimalkan identifikasi calon nasabah yang sebenarnya bersedia menaruh deposit, meskipun ada peningkatan false positive yang dapat diterima. Pendekatan ini diharapkan mencapai keseimbangan optimal antara efisiensi biaya kampanye dan pemeliharaan potensi nasabah yang dicari.  
-
-**Sumber**:
+**Source**:
 
 [McKinsey & Company, "The Data-Driven Organization: How Analytics and Machine Learning Are Transforming Business"](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-data-driven-enterprise-of-2025)    
 [OJK Indonesia, "BERINVESTASI MELALUI DEPOSITO"](https://sikapiuangmu.ojk.go.id/FrontEnd/CMS/Article/252)  
